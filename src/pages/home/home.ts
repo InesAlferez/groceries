@@ -33,7 +33,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public toastCtrl: ToastController, public alertCtrl: AlertController) {
 
   }
-
+// this function is called when the user removes an item from the list
   removeItem(item, index) {
     console.log("Removing Item - ", item, index);
     const toast = this.toastCtrl.create({
@@ -48,7 +48,8 @@ export class HomePage {
     console.log("Adding Item");
     this.showItemPrompt();
   }
-
+// this function is called when the user clicks the add button
+// it will prompt the user to enter the name and quantity of the item
   showItemPrompt() {
     const prompt = this.alertCtrl.create({
       title: 'Add Item',
